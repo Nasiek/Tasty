@@ -2,7 +2,8 @@ require 'sinatra'
 require 'shotgun'
 require 'sinatra/activerecord'
 
-set :database, "sqlite3:users.sqlite3"
+set :database, "sqlite3:tastydatabase.sqlite3"
+require './models.rb'
 
 get '/Homepage' do
 erb :Homepage
