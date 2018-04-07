@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(version: 20180407004643) do
 
   create_table "blogs", force: :cascade do |t|
     t.text "blogpost"
+    t.datetime "date_created"
   end
 
   create_table "users", force: :cascade do |t|

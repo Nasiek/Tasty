@@ -10,6 +10,7 @@ erb :Homepage
 end
 
 get '/Personal_Homepage' do
+	@users = User.all
 	erb :Personal_Homepage
 end
 
@@ -18,5 +19,6 @@ get '/User_Profile' do
 end
 
 get '/Other_Users_Profile' do
+	
 	erb :Other_Users_Profile
 end

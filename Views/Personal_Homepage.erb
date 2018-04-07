@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Personal Homepage</title>
+    <meta charset="UTF-8">
+    <title>Personal Homepage</title>
 </head>
+
 <body>
-	<h1>
+    <h1>
 		Welcome to your food journey!
 	</h1>
+    <div class="users">
+        <% @users.each do |user| %>
+            First Name: <%= user.fname %><br>
+                Last Name: <%=user.lname %><br>
+                <% end %>
+    </div>
 </body>
+
 </html>
