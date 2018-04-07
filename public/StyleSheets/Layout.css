@@ -1,0 +1,23 @@
+body{
+	background-image: url(Images/Homepage.jpg);
+}
+.Title{
+	font-family: 'Pacifico', cursive;
+	font-size: 35px;
+	color: teal;
+}
+.container-fluid{
+	background-color: black;
+}	
+.navbar-brand{
+	background-color: green;
+	
+}
+.active{
+	background-color: teal;
+}
+.p1{
+	position: absolute;
+	top: 175%;
+	left: 45%;
+}
