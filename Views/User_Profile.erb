@@ -6,5 +6,17 @@
 </head>
 <body>
 	<h1>Account Details, Your own posts in one place etc....</h1>
+	<br>
+
+<h1>Feed</h1>
+<br>
+
+	<div class="posts_feed">
+		<% @blogpost.each do |post| %>
+            <p>Post: <%= post.blogpost %></p>
+            
+                
+                <% end %>
+	</div>
 </body>
 </html>
