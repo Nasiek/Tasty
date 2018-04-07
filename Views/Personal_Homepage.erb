@@ -8,13 +8,17 @@
 
 <body>
     <h1>
-		Welcome to your food journey!
-	</h1>
+        Welcome to your food journey!
+    </h1>
     <div class="users">
         <% @users.each do |user| %>
-            First Name: <%= user.fname %><br>
-                Last Name: <%=user.lname %><br>
-                <% end %>
+            <div class="name">First Name:
+                <%= user.fname %>
+                    <br> Last Name:
+                    <%=user.lname %>
+                        <br>
+                        <% end %>
+            </div>
     </div>
 </body>
 

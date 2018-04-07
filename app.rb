@@ -15,6 +15,7 @@ get '/Personal_Homepage' do
 end
 
 get '/User_Profile' do
+	@blogpost = Blog.all
 	erb :User_Profile
 end
 
