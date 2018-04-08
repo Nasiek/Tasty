@@ -60,19 +60,37 @@
 		</a>
 	</div>
 </div>
-	<
+
+  
+<div id="signup">
 <div class="Input">
-		<form>
-				<input type="text" fname="First Name" value="First Name">
-				<br>
-				<input type="text" lname="Last Name" value="Last Name">
-				<br>
-				<input type="text" email="Email Address" value="yourname@emailaddress.com">
-				<br>
-				<input type="text" location="Location" value="Philadelphia">
-				<br>
-		</form>
-		</div>
+    <form method="POST" action="/user/signup">
+        <input type="text" name="fname" value="First Name">
+        <br>
+        <input type="text" name="lname" value="Last Name">
+        <br>
+        <input type="text" name="Username" value="Username">
+        <input type="text" name="email" value="yourname@emailaddress.com">
+        <br>
+        <input type="text" name="city" value="city">
+        <br>
+    </form>
+    </div>
+</div>
+
+
+    <div id="signin">
+
+      <div class="Input">
+    <form method="POST" action="user/signin">
+        <input type="text" name="username" value="Username">
+        <br>
+        <input type="text" name="password" value="password">
+        <br>
+        
+    </form>
+    </div>
+</div>
 
 </body>
 
