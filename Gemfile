@@ -13,3 +13,4 @@ gem 'sqlite3' #environment db manipulaiton
 gem 'rake' #?
 gem 'sinatra'
 
+ 
