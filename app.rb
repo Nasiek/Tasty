@@ -9,17 +9,17 @@ get '/Homepage' do
 erb :Homepage
 end
 
-get '/Personal_Homepage' do
+get '/Newsfeed' do
 	@users = User.all
 	erb :Personal_Homepage
 end
 
-get '/User_Profile' do
+get '/MyProfile' do
 	@blogpost = Blog.all
 	erb :User_Profile
 end
 
-get '/Other_Users_Profile' do
-	
+get '/UserProfile/:id' do
+	@user = User.find(params[:id])
 	erb :Other_Users_Profile
 end
