@@ -23,3 +23,12 @@ get '/UserProfile/:id' do
 	@user = User.find(params[:id])
 	erb :Other_Users_Profile
 end
+
+post 'user/signup' do
+	params.to_s
+	end
+
+post 'user/signin' do
+	
+	params.to_s
+end
