@@ -73,13 +73,16 @@
 <div id="signup" class="Input">
     <form method="POST" action="/user/signup">
        <p>SIGN UP</p>
-        <input type="text" name="Username" value="Username"><input type="text" name="fname" value="First Name">
+        <input type="text" name="[user]uname" value="Username"><input type="text" name="fname" value="First Name">
         <br>
-        <input type="text" name="lname" value="Last Name">
+        <input type="text" name="[user]lname" value="Last Name">
         <br>
-        <input type="text" name="email" value="yourname@emailaddress.com">
+        <input type="text" name="[user]city" value="city">
         <br>
-        <input type="text" name="city" value="city">
+        <input type="text" name="[user]email" value="yourname@emailaddress.com">
+        <br>
+        <input type="integer" name="[user]password">
+        <input type="submit" name="submit">
         <br>
     </form>
     </div>
@@ -92,11 +95,12 @@
 <br>
     <div id="signin">
     <div class="Input2">
-    <form method="POST" action="user/signin">
+    <form method="POST" action="/user/signin">
         <p>SIGN IN</p>
-        <input type="text" name="username" value="Username">
+        <input type="text" name="[user]uname" value="Username">
         <br>
-        <input type="text" name="password" value="password">
+        <input type="text" name="[user]password" value="password">
+        <input type="submit" name="submit">
         <br>
         
     </form>

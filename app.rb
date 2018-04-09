@@ -1,9 +1,15 @@
 require 'sinatra'
 require 'shotgun'
 require 'sinatra/activerecord'
-
+enable :sessions
 set :database, "sqlite3:tastydatabase.sqlite3"
 require './models.rb'
+
+def current_user
+	if session[:user_id]
+		@current_user = User.find(session[:user_id])
+end
+end
 
 get '/Homepage' do
 erb :Homepage
@@ -24,17 +30,36 @@ get '/UserProfile/:id' do
 	erb :Other_Users_Profile
 end
 
-post 'user/signup' do
-	params.to_s
+post '/user/signup' do
+	User.create(params[:user])
+	params[:uname]
+	params[:fname]
+	params[:lname]
+	params[:email]
+	params[:city]
+	params[:password]
+	puts params.to_s
 	end
+
+post '/user/signin' do
+    
+    puts params.to_s
+	params[:username]
+	params[:password]
+end
+
+post 'blog/post' do
+Blog.create(params[:create])
+params[:category]
+params[:title]
+params[:blogpost]
+params[:user_id]
+# @blogpost : Blog.create
+end
 
 post 'user/signin' do
 	
 	params.to_s
 end
 
-def current_user
-	if session[:user_id]
-		@current_user = User.find(session[:user_id])
-end
-end
+
