@@ -7,21 +7,15 @@
 		<link href=StyleSheets/Main.css rel="stylesheet" type="text/css">
 		<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Dancing+Script|Lobster|Pacifico" rel="stylesheet">
 </head>
- <div id="Title">
- 		<h1>Tasty</h1>
- 		<div>
+ 
+ 	<h1 class="T">Tasty</h1>
+ 		
     
-		<h2 id="h2">
+		<h2 id="h2" class="h2">
 	 A place where food and thoughts meet!!!
 </h2>
 <body>
 
-	<div>
-
-		
-		<h1>Tasty</h1>
-
-</div>
 <div class="container">  
 	<div id="myCarousel" class="carousel slide" data-ride="carousel">
 		<!-- Indicators -->
@@ -70,41 +64,41 @@
 </div>
 
   
-<div id="signup" class="Input">
+<div id="signup" class="sp">
     <form method="POST" action="/user/signup">
-       <p>SIGN UP</p>
+       <p class="sign-text">SIGN UP</p>
         <input type="text" name="[user]uname" value="Username"><input type="text" name="fname" value="First Name">
         <br>
-        <input type="text" name="[user]lname" value="Last Name">
+        <input type="text" name="[user]fname" onfocus="this.value=''" value="First Name">
         <br>
-        <input type="text" name="[user]city" value="city">
+        <input type="text" name="[user]lname" onfocus="this.value=''" value="Last Name">
         <br>
-        <input type="text" name="[user]email" value="yourname@emailaddress.com">
+        <input type="text" name="[user]email" onfocus="this.value=''" value="yourname@emailaddress.com">
+        <br>
+        <input type="text" name="[user]city" onfocus=" this.value=''" value="city">
         <br>
         <input type="integer" name="[user]password">
         <input type="submit" name="submit">
+
         <br>
     </form>
-    </div>
-
-
-
 <br>
 <br>
 <br>
 <br>
     <div id="signin">
-    <div class="Input2">
-    <form method="POST" action="/user/signin">
+
+    <div class="signin">
+    <form method="POST" action="user/signin">
         <p>SIGN IN</p>
-        <input type="text" name="[user]uname" value="Username">
+        <input type="text"  name="[user]uname" onfocus="this.value=''" value="Username">
         <br>
-        <input type="text" name="[user]password" value="password">
-        <input type="submit" name="submit">
-        <br>
-        
-    </form>
+        <input type="text" name="[user]password" onfocus="this.value=''" value="password">
+ 
+    <br>
+     <button id="submit2" class="submit2" onclick="submit2()">Submit</button>
     </div>
+
 </div>
 
 </body>

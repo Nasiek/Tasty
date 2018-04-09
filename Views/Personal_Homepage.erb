@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Personal Homepage</title>
-    <link href="StyleSheets/PProfile.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Dancing+Script|Lobster|Pacifico" rel="stylesheet">
+    <link href=StyleSheets/Layout.css rel="stylesheet">
 </head>
 
 <body>
+     
+     <button id="sign-out" class="signout" onclick="signout()">Signout</button>
+    </div>
     <h1 class="FoodHead">
         Welcome to your food journey!
     </h1>
@@ -22,27 +24,26 @@
                         <% end %>
             </div>
     </div>
-    <div class="TextContainer">
-
-    <h2 class="BL">Blogging Is Life</h2>
-    <p1 class="Writedown">Write down your reviews</p1>
+    
+<div id="BlogPost" class="CC">
+    <div class="post">
+    <form method="POST" action="/create_mesaage">
+        <p1>Category</p1>
+        <input type="text" name="[create]category" onfocus="this.value=''" value="category">
+        <br>
+        <p2>Title</p2>
+        <input type="text" name="[create]title" onfocus="this.value=''" value="What would you like me to be called?">
+        <br>
+        <p3>Post Content</p3>
+        <input type="text" name="[create]blogpost" onfocus="this.value=''" value="Post Something Tasty">
+        <br>   
+        <input type="hidden" name="[post]user_id" value="<%= @current_user.id %>">
+    </form>
+      <br>
+     <button id="submit3" class="submit3" onclick="submit3()">Submit</button>
     </div>
-    <!-- Trigger/Open The Modal -->
-<button id="myBtn" class="button">Start New Blog</button>
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p>Food.Life.Blogs.</p>
-    <textarea rows="8" cols="50"></textarea>
 </div>
-
-</div>
-    </div>
-   <script type="text/javascript" src="JavaScript/Main.js"></script>
+ 
 </body>
 
 </html>
