@@ -1,5 +1,5 @@
 body{
-	background-image: url(Images/Homepage.jpg);
+	background-image: url("../Images/Homepage.jpg");
 }
 
 }
@@ -14,14 +14,15 @@ body{
 
 
 }
-.Images{
-	opacity: 0.4px;
-	position: absolute;
-	top: 30%;
-	left:10%;
-}
+
 .Input{
 	position: relative;
 	top: 175%;
 	left: 5%;
+}
+
+.Input2{
+	position: relative;
+	top: 175%;
+	left: 105%;
 }
