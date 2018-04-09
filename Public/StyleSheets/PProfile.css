@@ -2,6 +2,11 @@ body{
 background-color: white;
 
 }
+.wholepage{
+	position: absolute;
+	top: 10%;
+	left: 15%;
+}
 .FoodHead{
 	font-family: 'Lobster', cursive;
 	color: teal;
