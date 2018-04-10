@@ -15,7 +15,19 @@
     </form>
 
 	<h1>
-		Other Users' Recipes
+		Friends Recipes
 	</h1>
+    <div id="Content">""</div>
+    	<div class="posts_feed">
+		<% @user.user_id do |post| %>
+            <p>Title: <%= post.title %></p>
+
+            <p>Category:<%= post.category%></p>
+            <p>  <%= post.blogpost%></p>
+            <p>Username: <%=post.user_id%></p>
+            <p>Created:<%=post.created_at%></p>
+                
+                <% end %>
+	</div>
 </body>
 </html>

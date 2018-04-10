@@ -49,3 +49,9 @@ body{
 input{
 	width: 800%;
 }
+.submit3{
+	background-color: teal;
+}
+input[type=button]{
+
+}

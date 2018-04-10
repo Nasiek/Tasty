@@ -1,4 +1,4 @@
-<!--/////////   MY PROFILE   //////////////-->
+<!--/////////// MY Profile ///////////-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,17 +12,21 @@
 	<div class="wholepage">
 	<h1>Account Details, Your own posts in one place etc....</h1>
 	<br>
+
+<h2>Feed</h2>
+
 <form method="POST" action="/sign-out">
         
     <input id="sign-out" type="Submit" name="Sign Out">
     
     </form>
-<h1>Feed</h1>
+
 <br>
 
 	<div class="posts_feed">
 		<% @blogpost.each do |post| %>
             <p>Title: <%= post.title %></p>
+
             <p>Category:<%= post.category%></p>
             <p>  <%= post.blogpost%></p>
             <p>Username: <%=post.user_id%></p>
@@ -35,6 +39,7 @@
     <h2 class="BL">Blogging Is Life</h2>
     <p1 class="Writedown">Write down your reviews</p1>
     </div>
+  
     <!-- Trigger/Open The Modal -->
 <button id="myBtn" class="button">Start New Blog</button>
 
@@ -45,12 +50,31 @@
   <div class="modal-content">
     <span class="close">&times;</span>
     <p>Food.Life.Blogs.</p>
+    <select>
+  <option value="Appetizers">Appetizers</option>
+  <option value="Drinks/Cocktails">Drinks/Cocktails</option>
+  <option value="Entrees">Entrees</option>
+  <option value="Desserts">Desserts</option>
+</select>
+    <input type="text" name="title" value="Title">
     <textarea id="MText" rows="8" cols="75"></textarea>
-    <button id="Submit2" onClick="Submit2()">Submit</button>
+    <input type="submit" name="submit">
 </div>
 </div>
-    </div>
-  
+  </div>
+  <div class="update">
+  <form method="POST" action="/update_info">
+    
+  <input type="button" value="update profile">
+  </form>
+  </div>
+  <div class="editblog">
+  <form method="POST" action="/update_blog">
+  <input type="submit" value="update blogpost">
+  </form>
+  </div>
+
+
    <script type="text/javascript" src="JavaScript/Main.js"></script>
 </body>
 </html>
