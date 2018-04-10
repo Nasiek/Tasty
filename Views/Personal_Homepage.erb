@@ -1,3 +1,4 @@
+<!--/////////   Newsfeed   //////////////-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,11 +9,26 @@
 </head>
 
 <body>
-     
-     <button id="sign-out" class="signout" onclick="signout()">Signout</button>
+    <button id="sign-out" class="signout" onclick="signout()">Signout</button>
     </div>
     <h1 class="FoodHead">
-        Welcome to your food journey!
+        <h2>Welcome to your food journey,<%= @current_user.uname %>!</h2>
+
+
+<div id="POST_FEED">
+<% @blogpost.each do |post| %>
+    <h3><%= post.title %></h3>
+    <p>
+        <%= post.category %>
+    </p>
+    <div id="blogpost_contentbox"></div>
+    <p ><%= post.blogpost%>
+        
+    </p>
+<% end %>
+</div>
+
+Welcome to your food journey!
     </h1>
     <div class="users">
         <% @users.each do |user| %>
@@ -24,26 +40,24 @@
                         <% end %>
             </div>
     </div>
-    
-<div id="BlogPost" class="CC">
-    <div class="post">
-    <form method="POST" action="/create_mesaage">
-        <p1>Category</p1>
-        <input type="text" name="[create]category" onfocus="this.value=''" value="category">
-        <br>
-        <p2>Title</p2>
-        <input type="text" name="[create]title" onfocus="this.value=''" value="What would you like me to be called?">
-        <br>
-        <p3>Post Content</p3>
-        <input type="text" name="[create]blogpost" onfocus="this.value=''" value="Post Something Tasty">
-        <br>   
-        <input type="hidden" name="[post]user_id" value="<%= @current_user.id %>">
-    </form>
-      <br>
-     <button id="submit3" class="submit3" onclick="submit3()">Submit</button>
+    <div id="BlogPost" class="CC">
+        <div class="post">
+            <form method="POST" action="/create_mesaage">
+                <p1>Category</p1>
+                <input type="text" name="[create]category" onfocus="this.value=''" placeholder="category">
+                <br>
+                <p2>Title</p2>
+                <input type="text" name="[create]title" onfocus="this.value=''" placeholder="What would you like me to be called?">
+                <br>
+                <p3>Post Content</p3>
+                <input type="text" name="[create]blogpost" onfocus="this.value=''" placeholder="Post Something Tasty">
+                <br>
+                <input type="hidden" name="[create]user_id" value="<%= @current_user.id %>">
+            </form>
+            <br>
+            <button id="submit3" class="submit3" onclick="submit3()">Submit</button>
+        </div>
     </div>
-</div>
- 
 </body>
 
 </html>

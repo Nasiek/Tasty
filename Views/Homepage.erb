@@ -67,15 +67,15 @@
 <div id="signup" class="sp">
     <form method="POST" action="/user/signup">
        <p class="sign-text">SIGN UP</p>
-        <input type="text" name="[user]uname" value="Username"><input type="text" name="fname" value="First Name">
+        <input type="text" name="[user]uname" value="Username"><input type="text" name="fname" placeholder="First Name">
         <br>
-        <input type="text" name="[user]fname" onfocus="this.value=''" value="First Name">
+        <input type="text" name="[user]fname" onfocus="this.value=''" placeholder="First Name">
         <br>
-        <input type="text" name="[user]lname" onfocus="this.value=''" value="Last Name">
+        <input type="text" name="[user]lname" onfocus="this.value=''" placeholder="Last Name">
         <br>
-        <input type="text" name="[user]email" onfocus="this.value=''" value="yourname@emailaddress.com">
+        <input type="text" name="[user]email" onfocus="this.value=''" placeholder="yourname@emailaddress.com">
         <br>
-        <input type="text" name="[user]city" onfocus=" this.value=''" value="city">
+        <input type="text" name="[user]city" onfocus=" this.value=''" placeholder="city">
         <br>
         <input type="integer" name="[user]password">
         <input type="submit" name="submit">
@@ -89,11 +89,13 @@
     <div id="signin">
 
     <div class="signin">
-    <form method="POST" action="user/signin">
+    <form method="post" action="/user/signin">
         <p>SIGN IN</p>
-        <input type="text"  name="[user]uname" onfocus="this.value=''" value="Username">
+        <input type="text"  name="uname" onfocus="this.value=''" placeholder="Username">
         <br>
-        <input type="text" name="[user]password" onfocus="this.value=''" value="password">
+        <input type="text" name="password" onfocus="this.value=''" placeholder="Password">
+        <input type="submit" value="Submit">
+    </form>
  
     <br>
      <button id="submit2" class="submit2" onclick="submit2()">Submit</button>

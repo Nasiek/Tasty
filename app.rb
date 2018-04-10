@@ -12,12 +12,16 @@ end
 end
 
 get '/Homepage' do
+
 erb :Homepage
 end
 
 get '/Newsfeed' do
+	puts current_user 
 	@users = User.all
-	erb :Personal_Homepage
+	@blogpost = Blog.all
+
+	erb :Pesrsonal_Homepage
 end
 
 get '/MyProfile' do
@@ -41,12 +45,12 @@ post '/user/signup' do
 	puts params.to_s
 	end
 
-post '/user/signin' do
+# post '/user/signin' do
     
-    puts params.to_s
-	params[:username]
-	params[:password]
-end
+#     puts params.to_s
+# 	params[:username]
+# 	params[:password]
+# end
 
 post 'blog/post' do
 Blog.create(params[:create])
@@ -57,9 +61,20 @@ params[:user_id]
 # @blogpost : Blog.create
 end
 
-post 'user/signin' do
-	
-	params.to_s
+post '/user/signin' do
+    @user = User.where(uname: params[:uname]).first
+    puts "aaaaaaaaaaaaaaaaaaaaaaa"
+    puts @user.uname
+    puts "aaaaaaaaaaaaaaaaaaaaaaa"
+
+    if @user.password == params[:password]
+        session[:user_id] = @user.id
+        # flash[:notice] = "Success!"
+        redirect '/Newsfeed'
+    else
+        flash[:notice] = "FAILED LOGIN :("
+        redirect '/sign-in-failed'
+    end
 end
 
 
