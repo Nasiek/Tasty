@@ -63,11 +63,12 @@
 	</div>
 </div>
 
+
   
 <div id="signup" class="sp">
     <form method="POST" action="/user/signup">
        <p class="sign-text">SIGN UP</p>
-        <input type="text" name="[user]uname" value="Username"><input type="text" name="fname" placeholder="First Name">
+        <input type="text" onfocus="this.value=''"  name="[user]uname" placeholder="Username">
         <br>
         <input type="text" name="[user]fname" onfocus="this.value=''" placeholder="First Name">
         <br>
@@ -77,7 +78,7 @@
         <br>
         <input type="text" name="[user]city" onfocus=" this.value=''" placeholder="city">
         <br>
-        <input type="integer" name="[user]password">
+        <input type="string" name="[user]password" onfocus="this.value=''" placeholder="password">
         <input type="submit" name="submit">
 
         <br>
@@ -97,8 +98,8 @@
         <input type="submit" value="Submit">
     </form>
  
-    <br>
-     <button id="submit2" class="submit2" onclick="submit2()">Submit</button>
+    
+     
     </div>
 
 </div>
