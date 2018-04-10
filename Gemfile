@@ -13,5 +13,6 @@ gem 'sqlite3' #environment db manipulaiton
 gem 'rake' #?
 gem 'sinatra'
 gem 'seed_dump'
+gem 'sinatra-flash'
 
  
