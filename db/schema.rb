@@ -13,15 +13,21 @@
 ActiveRecord::Schema.define(version: 20180407004643) do
 
   create_table "blogs", force: :cascade do |t|
+    t.text "category"
+    t.text "title"
     t.text "blogpost"
-    t.datetime "date_created"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
+    t.string "uname"
     t.string "fname"
     t.string "lname"
     t.string "city"
     t.string "email"
+    t.string "password"
   end
 
 end
