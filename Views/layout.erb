@@ -18,15 +18,7 @@
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="#">Home</a></li>
-       <div id="signin" class="signin">
-    <form method="POST" action="user/signin">
-        <p>SIGN IN</p>
-        <input type="text"  name="[user]uname" onfocus="this.value=''" value="Username">
-        <br>
-        <input type="text" name="[user]password" onfocus="this.value=''" value="password">
- 
-    <br>
-     <button id="submit2" class="submit2" onclick="submit2()">Submit</button>
+
     </div>
     </ul>
   </div>
@@ -37,5 +29,6 @@
 		<p></p>
 	</div>
 	<%= yield %>
+
 </body>
 </html>

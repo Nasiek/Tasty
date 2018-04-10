@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit Info form</title>
+</head>
+<body>
+	<form method="POST" action="/update_info">
+	<input type="text" name="[user]uname"  placeholder="Username" value="<%=@current_user.uname%>">
+        <br>
+        <input type="text" name="[user]fname" onfocus="this.value=''"  placeholder="First name" value="<%=@current_user.fname%>">
+        <br>
+        <input type="text" name="[user]lname" onfocus="this.value=''"  placeholder="Last name" value="<%=@current_user.lname%>">
+        <br>
+        <input type="text" name="[user]email" onfocus="this.value=''"  placeholder="email" value="<%=@current_user.email%>">
+        <br>
+        <input type="text" name="[user]city" onfocus=" this.value=''"  placeholder="city" value="<%=@current_user.city%>">
+        <br>
+        <input type="string" name="[user]password" onfocus=" this.value=''" placeholder="password" value="<%=@current_user.password%>">
+	</form>
+
+</body>
+</html>

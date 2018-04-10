@@ -21,9 +21,18 @@ font-family: 'Dancing Script', cursive;
 .BL{
 font-family: 'Dancing Script', cursive;
 }
-.Writedown{
-
+.modal-content{
+ font-family: 'Lobster', cursive;
 }
-.button{
-	box-shadow: 2px 3px 3px 2px;
+.update{
+	width:20px;
+	position: absolute;
+	top: 220%;
+	left: 65%;
+}
+.editblog{
+	width:20px;
+	position: absolute;
+	top: 220%;
+	left: 80%;
 }
