@@ -17,7 +17,7 @@ post '/update_blog' do
 redirect '/update_blog_page'
 end
 
-get '/update_blog' do
+get '/update_blog_page' do
 @blogs = Blog.all
 erb :Edit_blogPost
 end
@@ -54,6 +54,7 @@ get '/Newsfeed' do
 end
 
 get '/MyProfile' do
+	puts current_user
 	@blogpost = Blog.all
 	erb :User_Profile
 end
@@ -112,7 +113,7 @@ post '/sign-out' do
  end
 
 put '/update_blog' do
-edit_blog = 
+# edit_blog = 
 end
  
 put '/update_profile' do
