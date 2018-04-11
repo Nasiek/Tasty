@@ -10,7 +10,7 @@
 </head>
 <body>
 	<div class="wholepage">
-	<h1>Account Details, Your own posts in one place etc....</h1>
+	<h1>Account Details, Your blog posts in one place etc....<%= @current_user.uname %>!</h1>
 	<br>
 
 <h2>NewsFeed</h2>
@@ -56,18 +56,27 @@
   <option value="Entrees">Entrees</option>
   <option value="Desserts">Desserts</option>
 </select>
-    <input type="text" name="title" value="Title">
-    <textarea id="MText" rows="8" cols="75"></textarea>
-    <input type="submit" name="submit">
+    <input type="text" name="title" placeholder="Title">
+    <input type="text" name="blogpost" placeholder="Post Content">
+    <input type="submit" value="Submit">
 </div>
 </div>
   </div>
+
+
+
+  <!-- Update Profile Button -->
   <div class="update">
-  <form method="POST" action="/update_profile">
+
+
+  <form method="POST" action="/update_info">
+
     
   <input type="button" value="update profile">
   </form>
   </div>
+
+<!-- Update Blog Post Button -->
   <div class="editblog">
   <form method="POST" action="/update_blog">
   <input type="submit" value="update blogpost">
