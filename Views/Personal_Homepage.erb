@@ -25,14 +25,13 @@ textarea {
 <body>
     <form method="POST" action="/sign-out">
         
-    <input id="sign-out" type="Submit" name="Sign Out">
+    <input class="OUT" id="sign-out" type="Submit" value="sign Out">
     
     </form>
-    <h1 class="FoodHead">
-        <h2>Welcome to your food journey,<%= @current_user.uname %>!</h2>
+        <h2 class="FoodHead">Welcome to your food journey,<%= @current_user.uname %>!</h2>
 
 
-<div id="POST_FEED">
+<div id="POST_FEED" class="postfeed">
 <% @blogpost.each do |post| %>
     <h3><%= post.title %></h3>
     <p>
@@ -44,10 +43,7 @@ textarea {
     </p>
 <% end %>
 </div>
-
-Welcome to your food journey!
-    </h1>
-    <div class="users">
+    <!-- <div class="users">
         <% @users.each do |user| %>
             <div class="name">First Name:
                 <%= user.fname %>
@@ -56,7 +52,7 @@ Welcome to your food journey!
                         <br>
                         <% end %>
             </div>
-    </div>
+    </div> -->
 
     <div id="BlogPost" class="CC">
         <div class="post">
@@ -71,12 +67,9 @@ Welcome to your food journey!
                 <input type="text" name="[create]blogpost" onfocus="this.value=''" placeholder="Post Something Tasty">
                 <br>
                 <input type="hidden" name="[create]user_id" value="<%= @current_user.id %>">
-                <input type="Submit" name="Submit">
+                <input type="Submit" class="sb" name="Submit">
             </form>
-            <br>
             
-
-            <!-- <p><a href="UserProfile/<%=user.id%>"> Noah</a></p> -->
         </div>
     </div>
 </body>

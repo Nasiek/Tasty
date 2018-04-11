@@ -22,8 +22,8 @@ body{
 .CC{
 	font-family: 'Abril Fatface', cursive;
 	position: absolute;
-	top: 170%;
-	left: 30%;
+	top: 180%;
+	left: 0%;
 }
 .FoodHead{
 	font-family: 'Lobster', cursive;
@@ -54,4 +54,29 @@ input{
 }
 input[type=button]{
 
+}
+.OUT{
+	width:10%;
+	font-family: 'Lobster', cursive;
+	font-size: 20px;
+	position: absolute;
+	top: 2%;
+	left: 88%;
+	
+}
+
+.OUT:hover{
+	box-shadow: 2px 3px 3px 2px teal;
+}
+.postfeed{
+	text-align: center;
+	overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+.sb{
+   width: 30%;
+}
+.post{
+	font-family: 'Dancing Script', cursive;
+	font-size: 30px;
 }

@@ -112,7 +112,7 @@ post '/sign-out' do
  end
 
 put '/update_blog' do
-edit_blog = 
+#edit_blog = 
 end
  
 put '/update_profile' do
@@ -142,5 +142,3 @@ post '/user/signin' do
         redirect '/Homepage'
     end
 end
-
-
