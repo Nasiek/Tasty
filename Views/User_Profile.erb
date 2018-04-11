@@ -13,11 +13,11 @@
 	<h1>Account Details, Your blog posts in one place etc....<%= @current_user.uname %>!</h1>
 	<br>
 
-<h2>Feed</h2>
+<h2>NewsFeed</h2>
 
 <form method="POST" action="/sign-out">
         
-    <input id="sign-out" type="Submit" name="Sign Out">
+    <input id="sign-out" type="submit" value="sign-out">
     
     </form>
 
@@ -70,6 +70,7 @@
 
 
   <form method="POST" action="/update_info">
+
     
   <input type="button" value="update profile">
   </form>
