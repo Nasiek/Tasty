@@ -9,8 +9,9 @@
 
 <br>
 <br>
-        <form method="PUT" action="/update_info">
-	<input type="text" name="[update]uname" value="<%=@current_user.uname%>">
+        <form method="POST" action="/update_info">
+	<input type="hidden" name="_method" value="PUT">
+        <input type="text" name="[update]uname" value="<%=@current_user.uname%>">
         <br>
         <input type="text" name="[update]fname" value="<%=@current_user.fname%>">
         <br>
@@ -21,6 +22,7 @@
         <input type="text" name="[update]city" value="<%=@current_user.city%>">
         <br>
         <input type="string" name="[update]password" value="<%=@current_user.password%>">
+        <input type="submit" value="Submit">
 	</form>
 
         <form method="POST" action="/delete_profile">

@@ -7,11 +7,15 @@
 
 <body>
     <div id="editpost" class="ep">
-        <form method="POST" action="/delete_profile">
+        <!-- <form method="POST" action="/delete_profile">
             <input type="delete" name="delete_profile">
-        </form>
+        </form> -->
+
+
         <div class="post">
-            <form method="PUT" action="/update_blog/<% @blog.id %>">
+            <form method="POST" action="/update_blog/<%= @blog.id %>">
+                  <input type="hidden" name="method" value="PUT">
+
                 <p2>Title</p2>
                 <input type="text" name="[create]title" value="<%=@blog.title %>">
                 <br>
@@ -28,6 +32,7 @@
         </div>
 
         <form method="POST" action="/delete_post">
+               <input type="hidden" name="Blogid" value="<%= @blog.id %>">
                 <input type="submit" value="Delete this Post">
 
                 

@@ -9,3 +9,10 @@ class CreateBlogsTable < ActiveRecord::Migration[5.1]
   end
 end
 end
+
+
+class BlogSort <ActiveRecord::Base
+  def self.sort_posts
+  	self.where([created_at < ? Time.now])
+  end 
+end
