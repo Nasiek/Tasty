@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
-has_many :Blogs
+has_many :blogs
 end
 
 class Blog < ActiveRecord::Base
-belongs_to :User
+belongs_to :user
 end

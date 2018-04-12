@@ -1,29 +1,38 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Edit blog Post</title>
+    <title>Edit blog Post</title>
 </head>
+
 <body>
-	<div id="editpost" class="ep">
-    <div class="post">
-    <form method="POST" action="/update_blog">
-        
-   <form method="PUT" action="/update_blog">     
-   <p1>Category</p1>
-    <input type="text" name="[create]category" onfocus="this.value=''" value="category">
-        <br>
-        <p2>Title</p2>
-        
+    <div id="editpost" class="ep">
+        <form method="POST" action="/delete_profile">
+            <input type="delete" name="delete_profile">
+        </form>
+        <div class="post">
+            <form method="PUT" action="/update_blog/<% @blog.id %>">
+                <p2>Title</p2>
+                <input type="text" name="[create]title" value="<%=@blog.title %>">
+                <br>
+                <p1>Category</p1>
+                <br>
+                <input type="text" name="[create]category" value="<%= @blog.category %>">
+                <br>
+                <p3>Post Content</p3>
+                <input type="text" name="[create]blogpost" value="<%= @blog.blogpost %>">
+                <input type="submit" value="Update Post">
+                <input type="hidden" name="[post]user_id" value="<%= @current_user.id %>">
+                
+            </form>
+        </div>
 
-        <input type="text" name="[create]title" onfocus="this.value=''" value="What would you like me to be called?">
-        <br>
-        <p3>Post Content</p3>
-        <textarea class="post" type="text" name="[create]blogpost" onfocus="this.value=''" value="Post Something Tasty">
-        <br>   
-        <input type="hidden" name="[post]user_id" value="<%= @current_user.id %>">
-    </form>
+        <form method="POST" action="/delete_post">
+                <input type="submit" value="Delete this Post">
+
+                
+        </form>
     </div>
-</div>
-
 </body>
+
 </html>
