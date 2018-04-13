@@ -1,33 +1,29 @@
 <!--/////////   User Profile/:id   //////////////-->
-
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Other Users Profile</title>
-</head>
-<body>
-	<form method="POST" action="/sign-out">
-        
-    <input class="OUT2" id="sign-out" type="Submit" name="Sign Out">
-    
-    </form>
-       <h1 class="FoodHead">Welcome to your food journey,"friend"</h1>
-	<h2>
-		Friends Recipes
-	</h2>
-    <div id="Content">""</div>
-    	<div class="posts_feed">
-		<% @user.user_id do |post| %>
-            <p>Title: <%= post.title %></p>
 
-            <p>Category:<%= post.category%></p>
-            <p>  <%= post.blogpost%></p>
-            <p>Username: <%=post.user_id%></p>
-            <p>Created:<%=post.created_at%></p>
-                
+<head>
+    <meta charset="UTF-8">
+    <title>Other Users Profile</title>
+</head>
+
+<body>
+    <form method="POST" action="/sign-out">
+        <input class="OUT2" id="sign-out" type="Submit" name="Sign Out">
+    </form>
+    <h1 class="FoodHead">Welcome to the Tasty Network! </h1>
+    <h2>
+        All Tasty Bloggers
+    </h2>
+    <div>
+        <div class="blogtitle">
+            <% @user.each do |user| %>
+                <h3><a href="/Friend/<%= user.id %>"><%= user.fname %></a></h3>
+                <p>Location:<%= user.city %></p>
                 <% end %>
-	</div>
+        </div>
+    </div>
+    
 </body>
+
 </html>

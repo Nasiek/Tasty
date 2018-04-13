@@ -84,10 +84,25 @@ get '/MyProfile' do
 	erb :User_Profile
 end
 
-get '/UserProfile/:id' do
+get '/UserProfile/' do
+	@user =User.all
 	@user = User.find(params[:id])
 	erb :Other_Users_Profile
 end
+
+get '/Friend/:id' do
+		@user = User.find(params[:id])
+		@blogposts = Blog.where(user_id: @user.id)
+		erb :Friends
+	end
+
+get '/AllUsers' do
+	#@user = User.find(params[:id])
+	@user = User.all
+	erb :Other_Users_Profile
+end
+
+
 
 post '/user/signup' do
 	User.create(params[:user])
