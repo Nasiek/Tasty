@@ -6,15 +6,26 @@
 </head>
 
 <body>
-    <div id="editpost" class="ep">
-        <!-- <form method="POST" action="/delete_profile">
-            <input type="delete" name="delete_profile">
-        </form> -->
 
-
-        <div class="post">
-            <form method="POST" action="/update_blog/<%= @blog.id %>">
-                  <input type="hidden" name="method" value="PUT">
+	<div id="editpost" class="ep">
+    <div class="post">
+    <form method="POST" action="/update_blog">
+        
+   <form method="PUT" action="/update_blog">     
+   <p1>Category</p1>
+    <input type="text" name="[create]category" onfocus="this.value=''" value="category">
+        <br>
+        <p2>Title</p2>
+        <input type="text" name="[create]title" onfocus="this.value=''" value="What would you like me to be called?">
+        <br>
+        <p3>Post Content</p3>
+        <br>
+        <textarea rows="4" cols="50" class="post" type="text" name="[create]blogpost" onfocus="this.value=''" value="Post Something Tasty"></textarea>
+        <br>   
+        <input type="hidden" name="[post]user_id" value="<%= @current_user.id %>">
+    </form>
+    </div>
+</div>
 
                 <p2>Title</p2>
                 <input type="text" name="[create]title" value="<%=@blog.title %>">

@@ -7,17 +7,20 @@
 	<title>User Profile</title>
 	<link href="StyleSheets/PProfile.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Dancing+Script|Lobster|Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Lora" rel="stylesheet">
 </head>
 <body>
+  
 	<div class="wholepage">
-	<h1>Account Details, Your blog posts in one place etc....<a title="Edit Post" href="/update_info/current_user"> <%= @current_user.uname %></a>!</h1>
+	<h1 class="Hdetails">Account Details, Your blog posts in one place etc....<a title="Edit Post" href="/update_info/current_user"> <%= @current_user.uname %></a>!</h1>
+
 	<br>
 
-<h2>NewsFeed</h2>
+<h2 class="NF">NewsFeed</h2>
 
 <form method="POST" action="/sign-out">
         
-    <input id="sign-out" type="submit" value="sign-out">
+    <input class="SO" id="sign-out" type="submit" value="sign-out">
     
     </form>
 
@@ -62,7 +65,9 @@
     <input type="hidden" name="[create]user_id" value="<%= @current_user.id %>">
     <input type="submit" value="Submit">
     </form>
+
 </div>
+<input class="blogsubmit" type="submit" value="Submit">
 </div>
   </div>
 
