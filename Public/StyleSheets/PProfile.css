@@ -4,8 +4,8 @@ background-color: white;
 }
 .wholepage{
 	position: absolute;
-	top: 10%;
-	left: 15%;
+	top: 20%;
+	left: 25%;
 }
 .FoodHead{
 	font-family: 'Lobster', cursive;
@@ -43,11 +43,11 @@ font-size: 45px;
 .SO{
 	width: 10%;
 	position: absolute;
-	top: -2.5%;
-	left: 90%;
+	top: 2%;
+	left: 85%;
 	font-family: 'Lobster', cursive;
 	font-size: 20px;
-	border-radius: 50px;
+	border-radius: 40px;
 }
 .SO:hover{
 	box-shadow: 2px 3px 3px 2px teal;
@@ -79,8 +79,11 @@ font-size: 45px;
 .modal{
 	width: 60%;
 	height: 50%;
-	position: sticky;
+	position: fixed;
 	top: 10%;
 	left: 30%;
 
+}
+.POST1{
+	width: 40%;
 }

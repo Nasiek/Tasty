@@ -21,7 +21,7 @@ body{
 }
 .CC{
 	font-family: 'Libre Baskerville', serif;
-	position: absolute;
+	position: sticky;
 	top: 180%;
 	left: 0%;
 }
@@ -94,4 +94,24 @@ input[type=button]{
 	box-sizing: content-box width 30%;
 	text-overflow: wrap;
 	
+}
+.titleme{
+	width: 30%;
+
+}
+.postcontent{
+	width: 30%;
+
+}
+.Create1{
+	text-decoration: underline;
+}
+.PICK{
+	text-decoration: underline;
+}
+.PF{
+	text-decoration: underline;
+}
+.CAT{
+	text-decoration: underline;
 }

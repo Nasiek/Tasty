@@ -62,6 +62,9 @@ textarea {
     <div id="BlogPost" class="CC">
         <div class="post">
             <form method="POST" action="/create_message">
+                <h1 class="Create1">Create Your Own Posts</h1>
+                <br>
+                <h2 class="CAT">First Pick A Category</h2>
          <select>
          <option value="Appetizers">Appetizers</option>
          <option value="Drinks/Cocktails">Drinks/Cocktails</option>
@@ -69,11 +72,13 @@ textarea {
          <option value="Desserts">Desserts</option>
          </select>
                 <br>
-                <p2>Title</p2>
-                <input type="text" name="[create]title" onfocus="this.value=''" placeholder="What would you like me to be called?">
+                <p2 class="PICK">Then Pick A Title</p2>
                 <br>
-                <p3>Post Content</p3>
-                <input type="text" name="[create]blogpost" onfocus="this.value=''" placeholder="Post Something Tasty">
+                <input class="titleme" type="text" name="[create]title" onfocus="this.value=''" placeholder="What would you like me to be called?">
+                <br>
+                <p3 class="PF">Finally Post How Feel</p3>
+                <br>
+                <textarea class="postcontent" type="text" name="[create]blogpost" onfocus="this.value=''" placeholder="Post Something Tasty" maxlength="150"></textarea>
                 <br>
                 <input type="hidden" name="[create]user_id" value="<%= @current_user.id %>">
                 <input type="Submit" class="sb" name="Submit" value="Submit">

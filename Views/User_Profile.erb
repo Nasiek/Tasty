@@ -10,19 +10,20 @@
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Lora" rel="stylesheet">
 </head>
 <body>
+  <form method="POST" action="/sign-out">
+        
+    <input class="SO" id="sign-out" type="submit" value="sign-out">
+    
+    </form>
   
 	<div class="wholepage">
 	<h1 class="Hdetails">Account Details, Your blog posts in one place etc....<a title="Edit Post" href="/update_info/current_user"> <%= @current_user.uname %></a>!</h1>
 
 	<br>
 
-<h2 class="NF">NewsFeed</h2>
+<h2 class="NF">Your Current Posts</h2>
 
-<form method="POST" action="/sign-out">
-        
-    <input class="SO" id="sign-out" type="submit" value="sign-out">
-    
-    </form>
+
 
 <br>
 
@@ -61,7 +62,9 @@
   <option value="Desserts">Desserts</option>
 </select>
     <input type="text" name="[create]title" placeholder="Title">
-    <input type="text" name="[create]blogpost" placeholder="Post Content">
+    <br>
+    <textarea class="POST1" type="text" name="[create]blogpost" placeholder="Post Content" maxlength="150"></textarea>
+    <br>
     <input type="hidden" name="[create]user_id" value="<%= @current_user.id %>">
     <input type="submit" value="Submit">
     </form>
@@ -69,31 +72,6 @@
 </div>
 <input class="blogsubmit" type="submit" value="Submit">
 </div>
-  </div>
-
-
-
-  <!-- Update Profile Button -->
-  <div class="update">
-
-
-  <form method="POST" action="/update_info">
-
-    
-  <input type="button" value="update profile">
-  </form>
-  </div>
-
-
-
-<!-- Update Blog Post Button -->
-
-
-
-  <div class="editblog">
-  <form method="POST" action="/update_blog">
-  <input type="submit" value="update blogpost">
-  </form>
   </div>
 
 
