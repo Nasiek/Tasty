@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Friends</title>
+</head>
+<body>
+	<h1>
+		Check out <%= @user.fname %>'s Tasty Meals
+	</h1>
+
+	<div class="posts_feed">
+		<% @blogposts.each do |post| %>
+            <p>Title:<%= post.title %></p>
+
+            <p>Category:<%= post.category%></p>
+            <p>  <%= post.blogpost%></p>
+            <p>Username: <%=post.user.fname%></p>
+            <p>Created:<%=post.created_at%></p>
+                
+                <% end %>
+	</div>
+</body>
+</html>
