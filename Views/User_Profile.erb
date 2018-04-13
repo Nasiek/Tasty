@@ -12,7 +12,8 @@
 <body>
   
 	<div class="wholepage">
-	<h1 class="Hdetails">All your personal account details and your blog posts in one place etc....<%= @current_user.uname %>!</h1>
+	<h1 class="Hdetails">Account Details, Your blog posts in one place etc....<a title="Edit Post" href="/update_info/current_user"> <%= @current_user.uname %></a>!</h1>
+
 	<br>
 
 <h2 class="NF">NewsFeed</h2>
@@ -26,12 +27,12 @@
 <br>
 
 	<div class="posts_feed">
-		<% @blogpost.each do |post| %>
-            <p>Title: <%= post.title %></p>
+		<% @blogposts.each do |post| %>
+            <p>Title:<a title="Edit Post" href="/update_blog_page/<%= post.id %>"><%= post.title %></a></p>
 
             <p>Category:<%= post.category%></p>
             <p>  <%= post.blogpost%></p>
-            <p>Username: <%=post.user_id%></p>
+            <p>Username: <%=post.user.fname%></p>
             <p>Created:<%=post.created_at%></p>
                 
                 <% end %>
@@ -52,14 +53,19 @@
   <div class="modal-content">
     <span class="close">&times;</span>
     <p>Food.Life.Blogs.</p>
-    <select>
+    <form method="POST" action="/create_message">
+    <select name="[create]category">
   <option value="Appetizers">Appetizers</option>
   <option value="Drinks/Cocktails">Drinks/Cocktails</option>
   <option value="Entrees">Entrees</option>
   <option value="Desserts">Desserts</option>
 </select>
-    <input type="text" name="title" placeholder="Title">
-    <input type="text" name="blogpost" placeholder="Post Content">
+    <input type="text" name="[create]title" placeholder="Title">
+    <input type="text" name="[create]blogpost" placeholder="Post Content">
+    <input type="hidden" name="[create]user_id" value="<%= @current_user.id %>">
+    <input type="submit" value="Submit">
+    </form>
+
 </div>
 <input class="blogsubmit" type="submit" value="Submit">
 </div>
@@ -78,7 +84,12 @@
   </form>
   </div>
 
+
+
 <!-- Update Blog Post Button -->
+
+
+
   <div class="editblog">
   <form method="POST" action="/update_blog">
   <input type="submit" value="update blogpost">
@@ -89,3 +100,4 @@
    <script type="text/javascript" src="JavaScript/Main.js"></script>
 </body>
 </html>
+

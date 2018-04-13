@@ -4,19 +4,32 @@
 	<title>Edit Info form</title>
 </head>
 <body>
-	<form method="POST" action="/update_info">
-	<input type="text" name="[user]uname"  placeholder="Username" value="<%=@current_user.uname%>">
+	
+        <h1>Personal Acount Details</h1>
+
+<br>
+<br>
+        <form method="POST" action="/update_info">
+	<input type="hidden" name="_method" value="PUT">
+        <input type="text" name="[update]uname" value="<%=@current_user.uname%>">
         <br>
-        <input type="text" name="[user]fname" onfocus="this.value=''"  placeholder="First name" value="<%=@current_user.fname%>">
+        <input type="text" name="[update]fname" value="<%=@current_user.fname%>">
         <br>
-        <input type="text" name="[user]lname" onfocus="this.value=''"  placeholder="Last name" value="<%=@current_user.lname%>">
+        <input type="text" name="[update]lname" value="<%=@current_user.lname%>">
         <br>
-        <input type="text" name="[user]email" onfocus="this.value=''"  placeholder="email" value="<%=@current_user.email%>">
+        <input type="text" name="[update]email" value="<%=@current_user.email%>">
         <br>
-        <input type="text" name="[user]city" onfocus=" this.value=''"  placeholder="city" value="<%=@current_user.city%>">
+        <input type="text" name="[update]city" value="<%=@current_user.city%>">
         <br>
-        <input type="string" name="[user]password" onfocus=" this.value=''" placeholder="password" value="<%=@current_user.password%>">
+        <input type="string" name="[update]password" value="<%=@current_user.password%>">
+        <input type="submit" value="Submit">
 	</form>
+
+        <form method="POST" action="/delete_profile">
+                <input type="submit" value="Delete Profile">
+
+                
+        </form>
 
 </body>
 </html>
