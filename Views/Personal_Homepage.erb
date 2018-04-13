@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <title>Personal Homepage</title>
     <link href=StyleSheets/Layout.css rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Lora" rel="stylesheet">
 <style> 
 textarea {
     width: 100%;
@@ -32,12 +33,16 @@ textarea {
 
 
 <div id="POST_FEED" class="postfeed">
+    <div class="blogtitle">
 <% @blogpost.each do |post| %>
     <h3><%= post.title %></h3>
+    </div>
+    <div class="category">
     <p>
         <%= post.category %>
     </p>
-    <div id="blogpost_contentbox"></div>
+  </div>
+    <div id="blogpost_contentbox" class="contentbox"></div>
     <p ><%= post.blogpost%>
         
     </p>
@@ -57,8 +62,12 @@ textarea {
     <div id="BlogPost" class="CC">
         <div class="post">
             <form method="POST" action="/create_message">
-                <p1>Category</p1>
-                <input type="text" name="[create]category" onfocus="this.value=''" placeholder="category">
+         <select>
+         <option value="Appetizers">Appetizers</option>
+         <option value="Drinks/Cocktails">Drinks/Cocktails</option>
+         <option value="Entrees">Entrees</option>
+         <option value="Desserts">Desserts</option>
+         </select>
                 <br>
                 <p2>Title</p2>
                 <input type="text" name="[create]title" onfocus="this.value=''" placeholder="What would you like me to be called?">

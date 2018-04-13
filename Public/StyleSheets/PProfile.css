@@ -20,6 +20,10 @@ font-family: 'Dancing Script', cursive;
 }
 .BL{
 font-family: 'Dancing Script', cursive;
+font-size: 45px;
+}
+.BL:hover{
+	box-shadow: 2px 3px 3px 2px teal;
 }
 .modal-content{
  font-family: 'Lobster', cursive;
@@ -27,12 +31,56 @@ font-family: 'Dancing Script', cursive;
 .update{
 	width:20px;
 	position: absolute;
-	top: 220%;
+	top: 355%;
 	left: 65%;
 }
 .editblog{
 	width:20px;
 	position: absolute;
-	top: 220%;
+	top: 355%;
 	left: 80%;
+}
+.SO{
+	width: 10%;
+	position: absolute;
+	top: -2.5%;
+	left: 90%;
+	font-family: 'Lobster', cursive;
+	font-size: 20px;
+	border-radius: 50px;
+}
+.SO:hover{
+	box-shadow: 2px 3px 3px 2px teal;
+}
+.Hdetails{
+	font-family: 'Lobster', cursive;
+	font-size: 30px;
+	text-align: center;
+
+}
+.NF{
+	font-family: 'Pacifico', cursive
+	font-size: 18px;
+	text-align: center;
+	text-decoration: underline;
+
+}
+.posts_feed{
+	font-family: 'Lora', serif;
+	font-size: 20px;
+	overflow-wrap: break-word;
+    word-wrap: break-word;
+    text-align: center;
+}
+.blogsubmit{
+	font-size: 20px;
+	width: 100%;
+}
+.modal{
+	width: 60%;
+	height: 50%;
+	position: sticky;
+	top: 10%;
+	left: 30%;
+
 }
