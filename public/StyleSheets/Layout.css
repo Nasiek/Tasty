@@ -20,7 +20,7 @@ body{
 	left: 45%;
 }
 .CC{
-	font-family: 'Abril Fatface', cursive;
+	font-family: 'Libre Baskerville', serif;
 	position: absolute;
 	top: 180%;
 	left: 0%;
@@ -62,6 +62,7 @@ input[type=button]{
 	position: absolute;
 	top: 2%;
 	left: 88%;
+	border-radius: 50px;
 	
 }
 
@@ -69,14 +70,28 @@ input[type=button]{
 	box-shadow: 2px 3px 3px 2px teal;
 }
 .postfeed{
-	text-align: center;
-	overflow-wrap: break-word;
-    word-wrap: break-word;
+	
 }
 .sb{
    width: 30%;
 }
 .post{
-	font-family: 'Dancing Script', cursive;
-	font-size: 30px;
+	font-family: 'Libre Baskerville', serif;
+	font-size: 20px;
+}
+.blogtitle{
+	box-sizing: border-box;
+	text-decoration: underline;
+	
+}
+.category{
+	box-sizing: border-box;
+	text-overflow: wrap width 30%;
+	width: 50%;
+	position: center;
+}
+.contentbox{
+	box-sizing: content-box width 30%;
+	text-overflow: wrap;
+	
 }
