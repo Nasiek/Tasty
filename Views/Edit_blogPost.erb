@@ -3,6 +3,7 @@
 
 <head>
     <title>Edit blog Post</title>
+    <link href=/css/styles.css rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -12,58 +13,41 @@
       <a class="navbar-brand" href="#">Tasty</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="/">Home</a></li>
        <li><a href="/Newsfeed">Newsfeed</a></li>
        <li><a href="/MyProfile">MyProfile</a></li>
        <li><a href="/AllUsers">Friends</a></li> 
-
+     </ul> 
     </div>
-    </ul>
-  </div>
+    </div>
 </nav>
+    <div id="editpost" class="ep">
+        <div class="post">
+           
+            <form method="POST" action="/update_blog_page/<%=@blog.id%>">
 
-	<div id="editpost" class="ep">
-    <div class="post">
-    <form method="POST" action="/update_blog">
-        
-   <form method="PUT" action="/update_blog">     
-   <p1>Category</p1>
-    <input type="text" name="[create]category" onfocus="this.value=''" value="category">
-        <br>
-        <p2>Title</p2>
-        <input type="text" name="[create]title" onfocus="this.value=''" value="What would you like me to be called?">
-        <br>
-        <p3>Post Content</p3>
-        <br>
-        <textarea rows="4" cols="50" class="post" type="text" name="[create]blogpost" onfocus="this.value=''" value="Post Something Tasty"></textarea>
-        <br>   
-        <input type="hidden" name="[post]user_id" value="<%= @current_user.id %>">
-    </form>
-    </div>
-</div>
 
-                <p2>Title</p2>
-                <input type="text" name="[create]title" value="<%=@blog.title %>">
-                <br>
-                <p1>Category</p1>
-                <br>
-                <input type="text" name="[create]category" value="<%= @blog.category %>">
-                <br>
-                <p3>Post Content</p3>
-                <input type="text" name="[create]blogpost" value="<%= @blog.blogpost %>">
-                <input type="submit" value="Update Post">
-                <input type="hidden" name="[post]user_id" value="<%= @current_user.id %>">
+                <input name="_method" value="PUT" type="hidden">
+                    <p2>Title</p2>
+                    <input type="text" name="[create]title" value="<%=@blog.title %>">
+                    <br>
+                    <p1>Category</p1>
+                    <br>
+                    <input type="text" name="[create]category" value="<%= @blog.category %>">
+                    <br>
+                    <p3>Post Content</p3>
+                    <textarea cols="40" rows="*" class="inputfield" type="text" name="[create]blogpost"> <%= @blog.blogpost %>
+                    </textarea>
+                    <input type="submit" value="Update Post">
+                    <input type="hidden" name="[post]user_id" value="<%= @current_user.id %>">
                 
             </form>
         </div>
-
-        <form method="POST" action="/delete_post">
-               <input type="hidden" name="Blogid" value="<%= @blog.id %>">
+        <div>
+            <form method="POST" action="/delete_post">
+                <input type="hidden" name="Blogid" value="<%= @blog.id %>">
                 <input type="submit" value="Delete this Post">
-
-                
-        </form>
-    </div>
+            </form>
+        </div>
 </body>
 
 </html>

@@ -33,7 +33,7 @@ end
 
 
 #############
-put '/update_blog/:blog_id' do
+put '/update_blog_page/:blog_id' do
 @blog = Blog.find(params[:blog_id])
 @blog.update_attributes(params[:create])
 redirect '/MyProfile'
