@@ -1,18 +1,20 @@
 
-.T{
-	font-family: 'Pacifico', cursive
-    color:teal;
-    /*animation-direction: left;*/
+.hometitle{
+	font-size: 100px;
+    text-align: center;
+    font-family: 'Lobster', cursive;
 
 }
+
 .h2{
 	font-family: 'Dancing Script', cursive;
 	font-size: 25px;
+	text-align: center;
 
 }
 .signin{
 	font-family: 'Dancing Script', cursive;
-	color: green;
+	color: gold;
 	font-size: 18px;
 	position: absolute;
 	top:0%;
@@ -20,7 +22,7 @@
 }
 .sp{
 	font-family: 'Dancing Script', cursive;
-	color: green;
+	color: gold;
 	font-weight: 3px;
 	position: relative;
 	top: 2%;
