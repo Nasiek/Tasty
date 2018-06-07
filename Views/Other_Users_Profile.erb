@@ -5,11 +5,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Other Users Profile</title>
+     <link href=StyleSheets/Layout.css rel="stylesheet">
 </head>
 
 <body>
-        <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
+      <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">Tasty</a>
     </div>
@@ -23,14 +24,21 @@
   </div>
 </nav>
     <form method="POST" action="/sign-out">
-        <input class="OUT2" id="sign-out" type="Submit" name="Sign Out">
+        <input class="OUT2" id="sign-out" type="Submit" value="sign Out">
     </form>
     <h1 class="FoodHead">Welcome to the Tasty Network! </h1>
+    <div class="pagecontent">
     <h2>
-        All Tasty Bloggers
+        Taste the Excitement
     </h2>
+    </div>
+    <div class="friends">
+    <img src="Images/Friends.png" alt="friends" style="width:75%;">
+    </div>
+    
     <div>
         <div class="blogtitle">
+          <h3>Friends list</h3>
             <% @user.each do |user| %>
                 <h3><a href="/Friend/<%= user.id %>"><%= user.fname %></a></h3>
                 <p>Location:<%= user.city %></p>

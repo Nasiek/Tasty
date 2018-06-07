@@ -1,6 +1,8 @@
 body{
+	  
 	  background-image: linear-gradient(white, teal);
-      height: 1200px;
+      height: 2000px;
+      background-repeat: no-repeat;
 }
 
 
@@ -70,6 +72,22 @@ input[type=button]{
 .OUT:hover{
 	box-shadow: 2px 3px 3px 2px teal;
 }
+
+.OUT2{
+	width:10%;
+	font-family: 'Lobster', cursive;
+	font-size: 20px;
+	position: absolute;
+	top: 2%;
+	left: 88%;
+	border-radius: 50px;
+	text
+	
+}
+
+.OUT2:hover{
+	box-shadow: 2px 3px 3px 2px teal;
+}
 .postfeed{
 	
 }
@@ -83,6 +101,9 @@ input[type=button]{
 .blogtitle{
 	box-sizing: border-box;
 	text-decoration: underline;
+	 position: absolute;
+ 	 top: 100%;
+ 	 left: 10%;
 	
 }
 .category{
@@ -115,4 +136,19 @@ input[type=button]{
 }
 .CAT{
 	text-decoration: underline;
+}
+.pagecontent{
+ position: absolute;
+ top: 20%;
+ left: 38%;
+}
+.friends{
+ position: absolute;
+ top: 40%;
+ left: 20%;
+}
+
+.posts{
+  font-family: 'Libre Baskerville', serif;
+  font-size: 40px;
 }
